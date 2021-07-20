@@ -1,5 +1,5 @@
 <?php
-class Emial_Post_Info_Updater {
+class Additional_kit_Updater{
   protected $file;
   protected $plugin;
   protected $basename;
