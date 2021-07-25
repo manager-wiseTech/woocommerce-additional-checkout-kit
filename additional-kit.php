@@ -7,14 +7,6 @@
  * Author:            Ibrar Ayoub
  * Author URI:        http://www.finaldatasolutions.com/
  */
-// Include our updater file
-include_once( plugin_dir_path( __FILE__ ) . 'updater.php');
-
-$updater = new Additional_kit_Updater( __FILE__ ); // instantiate our class
-$updater->set_username( 'manager-wiseTech' ); // set username
-$updater->set_repository( 'woocommerce-additional-checkout-kit
-' ); // set repo
-$updater->initialize();
 // Display the custom checkbow field in checkout
 add_action( 'woocommerce_review_order_before_order_total', 'fee_installment_checkbox_field', 20 );
 function fee_installment_checkbox_field(){
