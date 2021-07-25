@@ -44,7 +44,7 @@ class Additional_kit_Updater{
     }
     $this->github_response = $response; // Set it to our property  
   }
- }
+}
   public function initialize() {
     add_filter( 'pre_set_site_transient_update_plugins', array( $this, 'modify_transient' ), 10, 1 );
     add_filter( 'plugins_api', array( $this, 'plugin_popup' ), 10, 3);
@@ -122,5 +122,6 @@ class Additional_kit_Updater{
   }
   return $result;
 }
+
 }
 ?>
