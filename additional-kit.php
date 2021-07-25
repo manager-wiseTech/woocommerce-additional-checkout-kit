@@ -7,6 +7,23 @@
  * Author:            Ibrar Ayoub
  * Author URI:        http://www.finaldatasolutions.com/
  */
+
+
+
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/manager-wiseTech/woocommerce-additional-checkout-kit/',
+	__FILE__,
+	'woocommerce-additional-checkout-kit'
+);
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+
+//Optional: If you're using a private repository, specify the access token like this:
+$myUpdateChecker->setAuthentication('your-token-here');
+
+
 // Display the custom checkbow field in checkout
 add_action( 'woocommerce_review_order_before_order_total', 'fee_installment_checkbox_field', 20 );
 function fee_installment_checkbox_field(){
